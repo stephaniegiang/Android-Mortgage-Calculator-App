@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Mortgage Calculato</string>
+    <string name="app_name">Mortgage Calculator</string>
+    <string name="next">Next</string>
+    <string name="principal_amount">Principal Amount</string>
+    <string name="interest_group">Interest Group</string>
+    <string name="amoritization_period">Amoritization Period</string>
 </resources>
