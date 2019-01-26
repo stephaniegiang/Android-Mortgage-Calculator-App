@@ -7,7 +7,24 @@
     tools:context=".MainActivity">
 
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="324dp"
+        android:layout_marginLeft="324dp"
+        android:layout_marginBottom="52dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:scaleType="center"
+        android:src="@drawable/setting"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@drawable/setting" />
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -90,6 +107,7 @@
                 android:width="200dp"
                 android:maxHeight="1dp"
                 android:text="@string/next" />
+
         </LinearLayout>
 
     </LinearLayout>
