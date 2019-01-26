@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="currencies">
+        <item>"(CAD) Canadian Dollars"</item>
+        <item>"(USD) US Dollars"</item>
+        <item>"(EUR) Euros"</item>
+        <item>"(GBP) Pound Sterling"</item>
+    </string-array>
+    <string-array name="payment_freq">
+        <item>"Daily"</item>
+        <item>"Weekly"</item>
+        <item>"Bi-Weekly"</item>
+        <item>"Monthly"</item>
+    </string-array>
+</resources>

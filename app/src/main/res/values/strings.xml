@@ -4,4 +4,7 @@
     <string name="principal_amount">Principal Amount</string>
     <string name="interest_group">Interest Group</string>
     <string name="amoritization_period">Amoritization Period</string>
+    <string name="settings">Settings</string>
+    <string name="currency">Currency</string>
+    <string name="payment_frequency">Payment Frequency</string>
 </resources>
