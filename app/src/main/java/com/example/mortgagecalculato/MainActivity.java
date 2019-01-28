@@ -1,6 +1,7 @@
 package com.example.mortgagecalculato;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText amortizationPeriod = (EditText) findViewById(R.id.amoritization_period);
 
         Button calculateButton = (Button) findViewById(R.id.next);
-        Button settingsButton = (Button) findViewById(R.id.settings_button);
+        FloatingActionButton settingsButton = findViewById(R.id.settings_button);
 
         calculateButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
@@ -36,12 +37,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        settingsButton.setOnClickListener(new OnClickListener() {
-//            public void onClick(View v) {
-//                Intent intentMain = new Intent(MainActivity.this, Settings.class);
-//                MainActivity.this.startActivity(intentMain);
-//            }
-//        });
+        settingsButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                Intent toSettings = new Intent(v.getContext(), Settings.class);
+                startActivity(toSettings);
+            }
+        });
     }
 
     @Override
