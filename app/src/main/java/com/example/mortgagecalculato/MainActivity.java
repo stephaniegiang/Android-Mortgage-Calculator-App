@@ -1,5 +1,6 @@
 package com.example.mortgagecalculato;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
             }
         });
+
+//        settingsButton.setOnClickListener(new OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intentMain = new Intent(MainActivity.this, Settings.class);
+//                MainActivity.this.startActivity(intentMain);
+//            }
+//        });
     }
 
     @Override
