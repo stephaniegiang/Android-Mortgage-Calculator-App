@@ -8,8 +8,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="400dp"
         android:orientation="vertical"
+        android:padding="20dp"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -49,5 +50,11 @@
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:entries="@array/payment_freq" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
