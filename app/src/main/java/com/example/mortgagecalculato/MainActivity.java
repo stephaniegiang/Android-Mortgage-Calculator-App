@@ -1,6 +1,7 @@
 package com.example.mortgagecalculato;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,11 +29,13 @@ public class MainActivity extends AppCompatActivity {
 
         calculateButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
+                SharedPreferences userPreferences = getSharedPreferences("userPreferences", MODE_PRIVATE);
+                int paymentFreq = userPreferences.getInt("payment_freq", 365);
                 int principal = Integer.parseInt(principalAmount.getText().toString());
                 double interest = Double.parseDouble(interestAmount.getText().toString());
                 int amortization = Integer.parseInt(amortizationPeriod.getText().toString());
 
-                String result = Double.toString(CalculateMortgage.calculate(principal, interest, amortization));
+                String result = Double.toString(CalculateMortgage.calculate(principal, interest, amortization, paymentFreq));
                 Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
             }
         });
