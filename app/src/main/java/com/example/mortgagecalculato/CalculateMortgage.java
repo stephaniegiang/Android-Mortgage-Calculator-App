@@ -3,9 +3,9 @@ package com.example.mortgagecalculato;
 public class CalculateMortgage {
 
     static public double calculate (int principalAmount, double interest, int totalPeriod){
-        int paymentFrequency = Settings.getPaymentFrequency();
+        // int paymentFrequency = Settings.getPaymentFrequency();
 
-        int totalPayments = totalPeriod  * paymentFrequency;
+        int totalPayments = totalPeriod  * 12;
         double monthlyInterest = (interest/100)/12;
 
         double interestPortion = Math.pow(1+monthlyInterest, totalPayments);
