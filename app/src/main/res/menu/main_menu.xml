@@ -2,7 +2,7 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/action_favorite"
+        android:id="@+id/help"
         app:showAsAction="ifRoom"
         android:icon="@drawable/help"
         android:title="Help" />
