@@ -30,13 +30,20 @@ public class MainActivity extends AppCompatActivity {
         calculateButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 SharedPreferences userPreferences = getSharedPreferences("userPreferences", MODE_PRIVATE);
-                int paymentFreq = userPreferences.getInt("payment_freq", 365);
+                int paymentFreq = userPreferences.getInt("payment_freq", 12);
+                String currency = userPreferences.getString("currency", "(CAD) Canadian Dollars");
                 int principal = Integer.parseInt(principalAmount.getText().toString());
                 double interest = Double.parseDouble(interestAmount.getText().toString());
                 int amortization = Integer.parseInt(amortizationPeriod.getText().toString());
 
                 String result = Double.toString(CalculateMortgage.calculate(principal, interest, amortization, paymentFreq));
-                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+
+                Intent toResults = new Intent(v.getContext(), Results.class);
+                toResults.putExtra("payment", result);
+                toResults.putExtra("currency", currency);
+                toResults.putExtra("paymentFreq", paymentFreq);
+                toResults.putExtra("timePeriod", amortization);
+                startActivity(toResults);
             }
         });
 

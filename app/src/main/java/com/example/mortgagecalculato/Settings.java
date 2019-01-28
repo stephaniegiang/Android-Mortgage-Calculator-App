@@ -52,7 +52,7 @@ public class Settings extends AppCompatActivity {
 
         SharedPreferences userPreferences = getSharedPreferences("userPreferences", MODE_PRIVATE);
         paymentFreq.setSelection(paymentFrequencyPosition.get(userPreferences.getInt("payment_freq", 12)));
-        currency.setSelection(currencyPosition.get(userPreferences.getString("currency", "CAD")));
+        currency.setSelection(currencyPosition.get(userPreferences.getString("currency", "(CAD) Canadian Dollars")));
 
 
         saveButton.setOnClickListener(new View.OnClickListener() {
