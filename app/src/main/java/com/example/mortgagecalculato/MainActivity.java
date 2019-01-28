@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText amortizationPeriod = (EditText) findViewById(R.id.amoritization_period);
 
         Button calculateButton = (Button) findViewById(R.id.next);
+        Button settingsButton = (Button) findViewById(R.id.settings_button);
 
         calculateButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
