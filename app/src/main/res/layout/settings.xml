@@ -28,7 +28,7 @@
             android:textSize="18sp" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/currency"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="20dp"
@@ -44,7 +44,7 @@
             android:textSize="18sp" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/payment_frequency"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="20dp"
