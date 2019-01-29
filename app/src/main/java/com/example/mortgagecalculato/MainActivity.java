@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         calculateButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                if (principalAmount != null || interestAmount != null || amortizationPeriod != null ){
+                if (principalAmount.getText().toString() == null || interestAmount.getText().toString() == null || amortizationPeriod.getText().toString() == null ){
                     Toast.makeText(getApplicationContext(), "All fields must be filled", Toast.LENGTH_LONG).show();
                 }else {
                     int principal = Integer.parseInt(principalAmount.getText().toString());
