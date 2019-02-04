@@ -29,12 +29,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="370dp"
             android:orientation="vertical"
+            android:padding="10dp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp">
 
@@ -54,18 +55,39 @@
                 android:layout_height="5dp"
                 android:layout_weight="1"
                 android:text="@string/this_is_usually_the_purchase_price_minus_your_down_payment"
-                android:textColor="@color/colorPrimaryLight" />
+                android:textColor="@color/colorPrimaryLight"
+                android:textStyle="italic" />
 
-            <EditText
-                android:id="@+id/principal"
-                style="@android:style/Widget.EditText"
+            <LinearLayout
+                android:id="@+id/princi_layout"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_weight="1"
-                android:background="@color/colorGrey"
-                android:ems="10"
-                android:inputType="number"
-                android:padding="5dp" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/princi_symbol"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="$"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/principal"
+                    style="@android:style/Widget.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorGrey"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:padding="5dp" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/Interest_group_text"
@@ -81,17 +103,39 @@
                 android:layout_height="5dp"
                 android:layout_weight="1"
                 android:text="@string/this_is_usually_the_purchase_price_minus_your_down_payment"
-                android:textColor="@color/colorPrimaryLight" />
+                android:textColor="@color/colorPrimaryLight"
+                android:textStyle="italic" />
 
-            <EditText
-                android:id="@+id/Interest_group"
+            <LinearLayout
+                android:id="@+id/interest_layout"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_weight="1"
-                android:background="@color/colorGrey"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:padding="5dp" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/interest_symbol"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="%"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/Interest_group"
+                    style="@android:style/Widget.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorGrey"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:padding="5dp" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/amoritization_period_text"
@@ -107,23 +151,47 @@
                 android:layout_height="5dp"
                 android:layout_weight="1"
                 android:text="@string/this_is_usually_the_purchase_price_minus_your_down_payment"
-                android:textColor="@color/colorPrimaryLight" />
+                android:textColor="@color/colorPrimaryLight"
+                android:textStyle="italic" />
 
-            <EditText
-                android:id="@+id/amoritization_period"
+            <LinearLayout
+                android:id="@+id/amor_layout"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_weight="1"
-                android:background="@color/colorGrey"
-                android:ems="10"
-                android:inputType="number"
-                android:padding="5dp" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/amor_symbol"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="Yrs"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="18sp"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/amoritization_period"
+                    style="@android:style/Widget.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorGrey"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:padding="5dp" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
             android:orientation="horizontal"
             android:paddingLeft="80dp"
             android:paddingTop="50dp"
@@ -137,8 +205,13 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:width="200dp"
+                android:background="@color/colorPrimaryLight"
                 android:maxHeight="1dp"
-                android:text="@string/next" />
+                android:text="@string/next"
+                android:textAllCaps="true"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
