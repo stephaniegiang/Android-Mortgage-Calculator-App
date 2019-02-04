@@ -21,7 +21,8 @@
         app:backgroundTint="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/setting" />
+        tools:srcCompat="@drawable/setting"
+        android:focusable="true" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -32,7 +33,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="350dp"
             android:orientation="vertical"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp">
@@ -40,53 +41,83 @@
             <TextView
                 android:id="@+id/principal_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="12dp"
+                android:layout_marginBottom="0dp"
                 android:layout_weight="1"
-                android:gravity="center"
+                android:paddingBottom="0dp"
                 android:text="@string/principal_amount"
                 android:textSize="24sp" />
 
+            <TextView
+                android:id="@+id/principal_description"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_weight="1"
+                android:text="@string/this_is_usually_the_purchase_price_minus_your_down_payment"
+                android:textColor="@color/colorPrimaryLight" />
+
             <EditText
                 android:id="@+id/principal"
+                style="@android:style/Widget.EditText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:layout_weight="1"
+                android:background="@color/colorGrey"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number"
+                android:padding="5dp" />
 
             <TextView
                 android:id="@+id/Interest_group_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="12dp"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:text="Interest"
                 android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/interest_description"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_weight="1"
+                android:text="@string/this_is_usually_the_purchase_price_minus_your_down_payment"
+                android:textColor="@color/colorPrimaryLight" />
 
             <EditText
                 android:id="@+id/Interest_group"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:layout_weight="1"
+                android:background="@color/colorGrey"
                 android:ems="10"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:padding="5dp" />
 
             <TextView
                 android:id="@+id/amoritization_period_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="12dp"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:text="@string/amoritization_period"
                 android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/amor_description"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_weight="1"
+                android:text="@string/this_is_usually_the_purchase_price_minus_your_down_payment"
+                android:textColor="@color/colorPrimaryLight" />
 
             <EditText
                 android:id="@+id/amoritization_period"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:layout_weight="1"
+                android:background="@color/colorGrey"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number"
+                android:padding="5dp" />
 
         </LinearLayout>
 

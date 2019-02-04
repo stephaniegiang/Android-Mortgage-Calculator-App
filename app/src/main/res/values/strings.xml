@@ -8,4 +8,5 @@
     <string name="currency">Currency</string>
     <string name="payment_frequency">Payment Frequency</string>
     <string name="save">Save</string>
+    <string name="this_is_usually_the_purchase_price_minus_your_down_payment">This is usually the purchase price minus your down payment</string>
 </resources>

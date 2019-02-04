@@ -17,6 +17,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/settings"
             android:textSize="24sp" />
 
@@ -24,15 +25,15 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="@string/currency"
-            android:textSize="18sp" />
+            android:textSize="24sp" />
 
         <Spinner
             android:id="@+id/currency"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="20dp"
+            android:background="@color/colorGrey"
             android:entries="@array/currencies"
             android:spinnerMode="dropdown" />
 
@@ -40,15 +41,15 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="@string/payment_frequency"
-            android:textSize="18sp" />
+            android:textSize="24sp" />
 
         <Spinner
             android:id="@+id/payment_frequency"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="20dp"
+            android:background="@color/colorGrey"
             android:entries="@array/payment_freq" />
 
         <Button
