@@ -8,6 +8,7 @@ import java.util.HashMap;
 import android.widget.Button;
 import android.content.SharedPreferences;
 import android.widget.Spinner;
+import android.content.Intent;
 
 
 public class Settings extends AppCompatActivity {
@@ -63,6 +64,11 @@ public class Settings extends AppCompatActivity {
                 prefEditor.putString("currency", currency.getSelectedItem().toString());
                 prefEditor.putInt("payment_freq", paymentFrequency.get(paymentFreq.getSelectedItem().toString()));
                 prefEditor.commit();
+
+                Intent intent = new Intent(v.getContext(), MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                //finish();
             }
         });
     }

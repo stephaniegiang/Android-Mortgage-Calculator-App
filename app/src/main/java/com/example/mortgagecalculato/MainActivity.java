@@ -50,9 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
         calculateButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                if (principalAmount.getText().toString() == null || interestAmount.getText().toString() == null || amortizationPeriod.getText().toString() == null ){
+                if (principalAmount.getText().toString().equals("") || interestAmount.getText().toString().equals("") || amortizationPeriod.getText().toString().equals("") ){
                     Toast.makeText(getApplicationContext(), "All fields must be filled", Toast.LENGTH_LONG).show();
                 }else {
+
                     int principal = Integer.parseInt(principalAmount.getText().toString());
                     double interest = Double.parseDouble(interestAmount.getText().toString());
                     int amortization = Integer.parseInt(amortizationPeriod.getText().toString());
