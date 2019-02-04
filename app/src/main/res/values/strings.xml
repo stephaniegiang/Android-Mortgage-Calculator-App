@@ -9,4 +9,16 @@
     <string name="payment_frequency">Payment Frequency</string>
     <string name="save">Save</string>
     <string name="this_is_usually_the_purchase_price_minus_your_down_payment">This is usually the purchase price minus your down payment</string>
+    <string name="m">M</string>
+    <string name="how_s_it_calculated">How\'s it Calculated?</string>
+    <string name="the_mortgage_payment_is_calculated_using_the_following_formula">The mortgage payment is calculated using the following formula</string>
+    <string name="what_are_the_parameters">What are the Parameters?</string>
+    <string name="r">r</string>
+    <string name="p">P</string>
+    <string name="n">n</string>
+    <string name="formula">formula</string>
+    <string name="ndes">the number of monthly payments, called the loan\'s term</string>
+    <string name="rdes">the monthly interest rate, expressed as a decimal, not a percentage. Since the quoted yearly percentage rate is not a compounded rate, the monthly percentage rate is simply the yearly percentage rate divided by 12; dividing the monthly percentage rate by 100 gives r, the monthly rate expressed as a decimal</string>
+    <string name="pdes">Principal Amount, the amount borrowed, known as the loan\'s principal</string>
+    <string name="mdes">Your Final Mortgage Payment Value</string>
 </resources>

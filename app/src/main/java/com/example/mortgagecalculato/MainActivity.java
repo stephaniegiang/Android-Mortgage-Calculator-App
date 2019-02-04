@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         switch(item.getItemId()) {
             case R.id.help:
                 //Steph: this is where the code for the help goes to
+                Intent toHelp = new Intent(this.getBaseContext(), Help.class);
+                startActivity(toHelp);
                 break;
             default:
                 return super.onOptionsItemSelected(item);

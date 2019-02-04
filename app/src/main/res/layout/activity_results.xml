@@ -26,6 +26,7 @@
             android:text="Results"
             android:textAllCaps="true"
             android:textSize="30sp"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
 
