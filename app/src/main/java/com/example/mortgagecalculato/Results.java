@@ -30,7 +30,7 @@ public class Results extends AppCompatActivity {
         int timePeriod = getIntent().getIntExtra("timePeriod", 0);
 
         String resultText =
-                paymentFreq + " payments of $" + payment + " " + currency + " will have to be made over " + timePeriod + " year(s).";
+                paymentFreq + " payments of " + currency + payment + " will have to be made over " + timePeriod + " year(s).";
 
         resultField.setText(resultText);
     }

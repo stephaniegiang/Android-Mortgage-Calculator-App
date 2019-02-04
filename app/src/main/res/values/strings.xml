@@ -22,4 +22,6 @@
     <string name="pdes">Principal Amount, the amount borrowed, known as the loan\'s principal</string>
     <string name="mdes">Your Final Mortgage Payment Value</string>
     <string name="interest">Interest</string>
+    <string name="interest_des">This is your monthly interest rate</string>
+    <string name="amour_dec">This is the time period it will take to repay a mortgage in full</string>
 </resources>

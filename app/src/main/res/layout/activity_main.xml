@@ -68,10 +68,10 @@
                 android:layout_weight="1"
                 android:gravity="end"
                 android:paddingRight="5dp"
-                android:text="$"
                 android:textAllCaps="false"
                 android:textColor="@color/colorGrey"
-                android:textSize="18sp" />
+                android:textSize="14sp"
+                tools:text="US$" />
 
             <EditText
                 android:id="@+id/principal"
@@ -98,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_weight="1"
-            android:text="@string/this_is_usually_the_purchase_price_minus_your_down_payment"
+            android:text="@string/interest_des"
             android:textColor="@color/colorPrimaryLight"
             android:textStyle="italic" />
 
@@ -146,7 +146,7 @@
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_weight="1"
-            android:text="@string/this_is_usually_the_purchase_price_minus_your_down_payment"
+            android:text="@string/amour_dec"
             android:textColor="@color/colorPrimaryLight"
             android:textStyle="italic" />
 

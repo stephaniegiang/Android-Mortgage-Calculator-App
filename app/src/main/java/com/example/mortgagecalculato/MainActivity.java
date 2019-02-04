@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,9 +24,29 @@ public class MainActivity extends AppCompatActivity {
         final EditText principalAmount = (EditText) findViewById(R.id.principal);
         final EditText interestAmount = (EditText) findViewById(R.id.Interest_group);
         final EditText amortizationPeriod = (EditText) findViewById(R.id.amoritization_period);
+        final TextView PrincipalTag = (TextView) findViewById(R.id.princi_symbol);
 
         Button calculateButton = (Button) findViewById(R.id.next);
         FloatingActionButton settingsButton = findViewById(R.id.settings_button);
+        final SharedPreferences userPreferences = getSharedPreferences("userPreferences", MODE_PRIVATE);
+        final String currency = userPreferences.getString("currency", "(CAD) Canadian Dollars");
+
+        switch (currency){
+            case "(CAD) Canadian Dollars":
+                PrincipalTag.setText("CA$");
+                break;
+            case "(USD) US Dollars":
+                PrincipalTag.setText("US$");
+                break;
+            case "(EUR) Euros":
+                PrincipalTag.setText("€");
+                break;
+            case "(GBP) Pound Sterling":
+                PrincipalTag.setText("£");
+                break;
+        }
+        final String symbol = (String) PrincipalTag.getText();
+
 
         calculateButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
@@ -36,15 +57,15 @@ public class MainActivity extends AppCompatActivity {
                     double interest = Double.parseDouble(interestAmount.getText().toString());
                     int amortization = Integer.parseInt(amortizationPeriod.getText().toString());
 
-                    SharedPreferences userPreferences = getSharedPreferences("userPreferences", MODE_PRIVATE);
+
                     int paymentFreq = userPreferences.getInt("payment_freq", 12);
-                    String currency = userPreferences.getString("currency", "(CAD) Canadian Dollars");
+
 
                     String result = Double.toString(CalculateMortgage.calculate(principal, interest, amortization, paymentFreq));
 
                     Intent toResults = new Intent(v.getContext(), Results.class);
                     toResults.putExtra("payment", result);
-                    toResults.putExtra("currency", currency);
+                    toResults.putExtra("currency", symbol);
                     toResults.putExtra("paymentFreq", paymentFreq);
                     toResults.putExtra("timePeriod", amortization);
                     startActivity(toResults);
